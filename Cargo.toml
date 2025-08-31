@@ -1,0 +1,20 @@
+[package]
+name = "parsing_events"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+jsonrpsee-http-client = "0.24.3"
+jsonrpsee-core = "0.24.3"
+subxt = { version = "0.43" }
+http_v1_for_jsonrpsee = { package = "http", version = "1" }
+tower = { version = "0.4", features = ["full"] }
+tower-http = { version = "0.5", features = [
+    "decompression-gzip",
+    "decompression-deflate",
+] }
+reqwest = { version = "0.11", features = ["json", "gzip", "deflate"] }
+serde_json = { version = "1.0", features = ["unbounded_depth"] }
+futures = "0.3"
+tokio = { version = "1.45.*", features = ["full"] }
+
