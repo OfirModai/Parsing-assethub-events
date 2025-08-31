@@ -1,0 +1,29 @@
+AssetHub Event Parser Example
+
+This project demonstrates how to parse events from a specific block on AssetHub. The example focuses on block 9520865, but you can modify it to use other blocks as needed.
+
+Setup
+
+Before running the project, you need to properly configure your node connection and authentication token. Open:
+
+/src/our_rpc_client.rs
+
+and set your values around line 33:
+
+pub const NODE_URL: &str = ""; // Enter your node URL here
+pub const TOKEN: &str = ""; // Enter your token here
+
+Make sure both fields are filled; otherwise, the parser will not work correctly.
+
+Usage
+
+Clone the repository:
+git clone <your-repo-url>
+cd <project-directory>
+
+Configure your node and token in /src/our_rpc_client.rs as described above.
+
+Build and run the project:
+cargo run
+
+The parser will fetch and process events from the specified block, printing relevant details to the console.
